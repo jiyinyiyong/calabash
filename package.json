@@ -1,0 +1,20 @@
+{
+  "name": "calabash",
+  "version": "0.0.1",
+  "description": "Calabash offsers a shortcut for bash command-lines",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "coffee test/run.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jiyinyiyong/calabash.git"
+  },
+  "keywords": [
+    "bash",
+    "command-line"
+  ],
+  "author": "jiyinyiyong",
+  "license": "BSD",
+  "readmeFilename": "readme.md"
+}
