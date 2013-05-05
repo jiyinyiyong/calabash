@@ -13,34 +13,13 @@ sudo npm install -g calabash
 And use it togather with `node-dev` to run commands at background:  
 
 ```coffee
-command = [
-  'echo 1'
-  'echo 2'
-]
-
-a = require('../lib/')
-a.run command
-
-command2 = """
-echo 3
-echo 4
-"""
-
-a.read command2
-```
-
-It's especially convenient for such a case:
-
-```coffee
-command = """
-jade -o ./ -wP src/
-coffee -o page/ -w src/
-stylus -o page/ -w src/
-cjsify -o build.js --source-map-file build.map -w coffee/
-doodle page/
-"""
-
-require('calabash').read command.split('\n')
+require("calabash").do "first parameter as comment",
+  "pkill -f doodle"
+  "coffee -o lib/ -wbc coffee/"
+  "jade -o build/ -wP layout/"
+  "style -o build/ -w layout/"
+  "node-dev server.coffee"
+  "doodle build/"
 ```
 
 Bash is both a great and a mad tool.

@@ -1,6 +1,6 @@
 {
   "name": "calabash",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Calabash offsers a shortcut for bash command-lines",
   "main": "lib/index.js",
   "scripts": {
