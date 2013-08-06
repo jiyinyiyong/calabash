@@ -2,6 +2,11 @@
 Calabash offsers a shortcut for bash command-lines
 ------
 
+Bash is both a great and a mad tool.
+
+Calabash calls Bash commands from CoffeeScript.
+And make it easier to be used in small tasks.
+
 ### Usage
 
 You may install this from NPM:  
@@ -22,7 +27,20 @@ require("calabash").do "first parameter as comment",
   "doodle build/"
 ```
 
-Bash is both a great and a mad tool.
+With `v0.1.0` new syntax is availale to add tasks in `dev.coffee`:
+
+```coffee
+bash = require 'calabash'
+bash.add 'task lily',
+  'echo lily'
+bash.add 'task ted',
+  'echo ted'
+bash.go()
+```
+
+and trigger a special task with `coffee dev.coffee lily`.
+
+It would be better to use it with `node-dev` to enable reloading.
 
 ### License
 
