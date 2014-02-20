@@ -27,6 +27,15 @@ require("calabash").do "first parameter as comment",
   "doodle build/"
 ```
 
+Or just run in an Array:
+
+```coffee
+require('../coffee').run [
+  'echo 1'
+  'echo 2'
+]
+```
+
 With `v0.1.0` new syntax is availale to add tasks in `dev.coffee`:
 
 ```coffee

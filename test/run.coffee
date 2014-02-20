@@ -10,3 +10,8 @@ require('../coffee').add 'task ted',
   'echo ted'
 
 require('../coffee').go()
+
+require('../coffee').run [
+  'echo 1'
+  'echo 2'
+]

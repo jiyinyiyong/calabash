@@ -15,6 +15,9 @@ exports.do = (_, queue...) ->
     console.log '➤➤', queue[index]
     echo (spawn array[0], array[1..])
 
+exports.run = (queue) ->
+  exports.do null, queue...
+
 exports.add = (name, queue...) ->
   tasks[name] = ->
     queue.map(split).forEach (array, index) ->
